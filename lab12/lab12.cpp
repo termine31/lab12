@@ -70,12 +70,26 @@ void passtonovka(int str1, int** mat) {
 
 int main()
 {
- 
+ // Метод матрицей
+    cout << "Введите кол-во ферзей(n): ";
+    cin >> N;
 
+    int** mat = new int* [N];
+    for (int i = 0; i < N; i == 0) {
+        mat[i] = new int[N];
+        for (int j = 0; j < N; j++) {
+            mat[i][j] = 0; 
+        }
+    }
 
+    scount = 0;
+    passtonovka(0, mat);
+    cout << "Решений для " << N << "ферзей: " << scount << endl;
 
+    for (int i = 0; i < N; i++) {
+        delete[] mat[i];
+    }
+    delete[] mat;
 
-
-
-
+    return 0;
 }
